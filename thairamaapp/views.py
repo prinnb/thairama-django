@@ -1,3 +1,68 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from thairamaapp.models import MenuCategory,FoodMenu, FoodCategory, AlbumGallery, ImageGallery
+from forms import SuggestionForm
+from django.http import HttpResponseRedirect
+from django.core.context_processors import csrf
 
 # Create your views here.
+def index(request):
+    return render(request, 'thairamaapp/index.html', {})
+
+def about_us(request):
+	context = {}
+	return render(request, 'thairamaapp/about_us.html', context)
+
+def press(request):
+	context = {}
+	return render(request, 'thairamaapp/press.html', context)
+
+def suggestion(request):
+	if request.method == 'POST': 
+		form = SuggestionForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return HttpResponseRedirect('/thairamaapp/') 
+
+	elif request.user.is_authenticated():
+		#automatically fill out name and email for logged in user
+		form = SuggestionForm(initial = {'name': request.user.username, 'email': request.user.email})
+	else:
+		form = SuggestionForm()
+	context = {}
+	context.update(csrf(request))
+	context['form'] = form
+	return render(request, 'thairamaapp/suggestion.html', context)
+
+def gallery(request):
+	albums = AlbumGallery.objects.all()
+	context = {'albums': albums}
+	return render(request, 'thairamaapp/gallery.html', context)
+
+def album(request, album_name):
+	album = get_object_or_404(AlbumGallery, name=album_name)
+	images = album.imagegallery_set.all()
+	context = {'images': images}
+	return render(request, 'thairamaapp/album.html', context)
+
+def menu(request):
+	menu_cats = MenuCategory.objects.all()
+	context = {'menu_cats': menu_cats}
+	return render(request, 'thairamaapp/menu.html', context)
+
+def menu_cat(request, menu_cat_name):
+	menu_cat = get_object_or_404(MenuCategory, name=menu_cat_name)
+	food_menu_list = FoodMenu.objects.filter(menu_cat = menu_cat).order_by('food_cat')
+	menu_dict = {}
+	
+	for food_menu in food_menu_list:
+		if food_menu.food_cat not in menu_dict:
+			menu_dict[food_menu.food_cat] = [food_menu]
+		else:
+			menu_dict[food_menu.food_cat].append(food_menu)
+
+	context = {'menu_cat': menu_cat, 'menu_dict' : menu_dict}
+	return render(request, 'thairamaapp/menu_cat.html', context)
+

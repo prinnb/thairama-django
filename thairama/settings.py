@@ -11,7 +11,18 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'restaurant/templates/restaurant/')]
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'thairamaapp/templates/thairamaapp/')]
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages",
+    'thairamaapp.context_processors.menu_category',
+    'thairamaapp.context_processors.album_gallery',
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -81,7 +92,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'restaurant/static/restaurant/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'thairamaapp/static/thairamaapp/media')
 MEDIA_URL = '/media/'
 
 # Parse database configuration from $DATABASE_URL
