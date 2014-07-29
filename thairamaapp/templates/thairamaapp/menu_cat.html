@@ -5,13 +5,13 @@
 <div class = content_text>
 
 <h1 align = "center">{{ menu_cat.name }}</h1>
-<p  align = "center">{{ menu_cat.description }}</p>
+<p  align = "center" style = "margin: 0;">{{ menu_cat.description }}</p>
 {% if menu_dict %}
 	<ul>
 	
 	{% for food_cat, food_menu_list in menu_dict.items %} 
-		<li><h1>{{food_cat.name}}</h1>
-			<h3>{{food_cat.description}}</h3>
+		<li><h2 style = "font-size:180%; margin-bottom: .2em;">{{food_cat.name}}</h2>
+			<h5 style = "margin: 0;">{{food_cat.description}}</h5>
 		</li>
 		<ul>
 		<!-- Display food menu (i.e., the items) in the food category -->
