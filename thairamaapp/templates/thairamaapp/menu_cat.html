@@ -18,7 +18,7 @@
 		{% for food_menu in food_menu_list %} 
 			<li>
 				<div>
-					<span style="float:left;">{{ food_menu.food_item.name }}</span>
+					<span style="float:left;"><p style= "margin-top: .1em; font-weight: 500;">{{ food_menu.food_item.name }}</p></span>
 
 					{% if food_menu.food_item.image %}
 						<span style="float:left; margin-left: 5px;">
@@ -30,7 +30,7 @@
 
 					<!-- Display price -->
 					{% if food_menu.price %}
-						<span style="float:right;">${{ food_menu.price|floatformat:2 }}</span>
+						<span style="float:right;"><p style= "margin-top: .1em; font-weight: 500;">${{ food_menu.price|floatformat:2 }}</p></span>
 					{% endif %}
 				</div>
 
