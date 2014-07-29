@@ -8,3 +8,5 @@ def menu_category(request):
 def album_gallery(request):
 	albums = AlbumGallery.objects.all()
 	return {'albums': albums}
+
+

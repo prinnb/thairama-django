@@ -22,6 +22,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.messages.context_processors.messages",
     'thairamaapp.context_processors.menu_category',
     'thairamaapp.context_processors.album_gallery',
+    "django.core.context_processors.request",
 )
 
 # Quick-start development settings - unsuitable for production
@@ -41,6 +42,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +50,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'thairamaapp',
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -115,6 +118,11 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', 
@@ -125,3 +133,5 @@ DATABASES = {
         'PASSWORD': '1BuhiyBQJkdJx6Lhnbv6XL9uE-',                             
     }
 }
+
+GRAPPELLI_ADMIN_TITLE = "Thai Rama Administration"

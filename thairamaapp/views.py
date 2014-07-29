@@ -36,6 +36,7 @@ def suggestion(request):
 	context['form'] = form
 	return render(request, 'thairamaapp/suggestion.html', context)
 
+
 def gallery(request):
 	albums = AlbumGallery.objects.all()
 	context = {'albums': albums}
@@ -54,7 +55,7 @@ def menu(request):
 
 def menu_cat(request, menu_cat_name):
 	menu_cat = get_object_or_404(MenuCategory, name=menu_cat_name)
-	food_menu_list = FoodMenu.objects.filter(menu_cat = menu_cat).order_by('food_cat')
+	food_menu_list = FoodMenu.objects.filter(menu_cat = menu_cat)
 	menu_dict = {}
 	
 	for food_menu in food_menu_list:

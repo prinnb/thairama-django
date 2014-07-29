@@ -1,7 +1,7 @@
 html, body{
 	height: 100%;
 	margin: 0;
-	color: white
+	color: white;
 }
 
 body{
@@ -12,6 +12,9 @@ a:link {color:#6c6c6c;}
 a:visited {color:#757575;}
 a:hover {color:white;} 
 a:active {color:white;} 
+a {
+    text-decoration: none;
+}
 
 .header{ 
 	background-color:#323232; 
@@ -25,7 +28,6 @@ a:active {color:white;}
 	width:100%; 
 	background-color:#4E4C4B;  
 	float:left;
-	min-height: 30em;
 }
 
 .content_text{
@@ -52,6 +54,7 @@ a:active {color:white;}
 	border-bottom: 1px solid #757575;
 	margin-left:30px;
 	margin-right:30px;
+	height: 1.8em;
 }
 
 .content_text ul ul li p{
@@ -72,7 +75,6 @@ a:active {color:white;}
 	box-shadow: 0px -1px 2px rgba(0,0,0,.5);
 	padding-bottom: 30px;
 	padding-top: 10px;
-	text-align: center;
 }
 
 .footer p{
@@ -157,7 +159,7 @@ textarea{
 
 #index_image{
 	height: 30em;
-	background-image: url(media/images/other/home.jpeg);
+	background-image: url(media/images/other/home_3.jpg);
 	background-position: center;
 	background-size: cover;
 	padding: 0;
@@ -182,7 +184,7 @@ textarea{
 /*********************************************************************************/
 /* Menu Bar                                                                      */
 /*********************************************************************************/
-@media all and (min-width: 820px) {
+@media all and (min-width: 1000px){
 	nav{
 		position: absolute;
 		right: 0;
@@ -192,91 +194,13 @@ textarea{
 		height: 100%;
 	}
 	nav ul li:hover {
-	background: #4b545f;
 	background: linear-gradient(top, #949085 0%, #A39F93 40%);
 	background: -moz-linear-gradient(top, #949085 0%, #A39F93 40%);
 	background: -webkit-linear-gradient(top, #949085 0%,#A39F93 40%);
 	}
 }
-/*
-nav{
-	position: absolute;
-	right: 10%;
-	top: 0;
-	height: 100%;
-}
 
-nav ul ul {
-	display: none;
-}
-	
-nav ul li:hover > ul {
-	display: block;
-}
-
-nav ul {
-	list-style: none;
-	position: relative;
-	display: inline-table;
-	margin:0;
-}
-nav ul:after {
-	content: ""; clear: both; display: block;
-}
-
-nav ul li {
-	float: left;
-	text-align: center;
-}
-
-nav ul li:hover {
-	background: #4b545f;
-	background: linear-gradient(top, #949085 0%, #A39F93 40%);
-	background: -moz-linear-gradient(top, #949085 0%, #A39F93 40%);
-	background: -webkit-linear-gradient(top, #949085 0%,#A39F93 40%);
-}
-	nav ul li:hover a {
-		color: #fff;
-	}
-
-nav ul li a {
-	display: block; 
-	color: #757575; 
-	text-decoration: none;
-	line-height: 150px;
-	padding: 0em 3em;
-	letter-spacing: 0.20em;
-	text-transform: uppercase;
-	font-family: 'Lato', sans-serif;
-	font-weight: 400;
-}
-
-nav ul ul {
-	background: #A39F93; 
-	padding: 0;
-	position: absolute; top: 100%;
-}
-nav ul ul li {
-	float: none; 
-	border-top: 1px solid #6C645D;
-	border-bottom: 1px solid #6C645D;
-	position: relative;
-}
-nav ul ul li:first-child{
-	border-top: 2px solid #6C645D;
-}
-
-nav ul ul li a {
-	padding: 15px 40px;
-	color: #fff;
-	line-height: 100%;
-}	
-nav ul ul li a:hover {
-	background: #6C645D;
-}
-*/
-
-@media all and (max-width: 820px) {
+@media all and (max-width: 1000px),  all and (max-device-width: 1000px) {
 	#logo{
 		width: 100%;
 		margin: 0;
@@ -285,4 +209,18 @@ nav ul ul li a:hover {
 	.content_text{
 	width: 85%;
 	}
+
+	.owl-carousel{
+		padding-top: 5.7em;
+	}
+	
 }
+
+
+
+    .owl-carousel .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+    }
+

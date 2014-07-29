@@ -2,35 +2,27 @@
 <html lang="en">
 <head>
 	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static 'thairamaapp/style.css' %}" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,
 	300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-    <!--Jquery-->
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
-    <!--JqueryUI-->
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
-
-	<script type='text/javascript' src= "{% static 'thairamaapp/script.js' %}"></script>
-
+	<link rel="stylesheet" type="text/css" href="{% static 'thairamaapp/style.css' %}" />
 	<link href="{% static 'flexnav/flexnav.css' %}" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src= "{% static 'flexnav/jquery.flexnav.js' %}"></script>
 
+	<link rel="shortcut icon" href="{{MEDIA_URL}}images/other/favicon.ico" >
+	<link rel="stylesheet" href= "{% static 'owlcarousel/owl.carousel.css' %}">
 	<title>{% block title %}{% endblock %}</title>
 
 </head>
 
 <body>
-<div class="header">
+<div class="header" style = "z-index: 900">
 
 	<div id = "logo">
 		<a href="{% url 'index' %}"><img src="{{MEDIA_URL}}images/other/logo.png" id = "logo_image"></a>
 	</div>
-	<div class="menu-button">Menu</div>
+	<div class="menu-button"><img src="{{MEDIA_URL}}images/other/menu_icon.svg" alt=""></div>
 	<nav>
-		<ul data-breakpoint="800" class="flexnav">
+		<ul data-breakpoint="800" class="flexnav" style = "padding-left: 0px; margin-right: 0px;">
 			<li><a href="{% url 'menu' %}">Menu</a>
 				<ul>
 				{% for menu_cat in menu_cats %}
@@ -46,7 +38,7 @@
 			    {% endfor %}
 				</ul>
 			</li>
-
+			<li><a href="{% url 'press' %}">Press</a></li>
 			<li><a href="{% url 'about_us' %}">About Us</a></li>
 			<li><a href="{% url 'suggestion' %}">Suggestion</a></li>
 		</ul>
@@ -59,8 +51,30 @@
 </div>
 
 <div class="footer">
-	<p>Copyright (c) 2014 Prinn Bantoengpratoomrad All rights reserved.</p>
+
+	<a href= "http://www.fb.com/thairamarestaurant" id ="fb_href">
+		<img src="{{MEDIA_URL}}images/other/fb.png" style = "max-width: 4%; min-width: 1.5em; float: right; padding-right:.8%; padding-top:.3em"
+		onmouseover="this.src='{{MEDIA_URL}}images/other/fb_2.png'" 
+		onmouseout="this.src='{{MEDIA_URL}}images/other/fb.png'"/>
+	</a>
+
+
+	<div style = "text-align: center; width: 90%; padding-left: 5%;">
+	<p><b><a href="tel:425-493-0026">Tel: 425-493-0026</a> | Fax: 425-493-0027</b></p>
+	<p><b>12190 Village Center Pl, Mukilteo, WA 98275</b></p>
+	<p>Copyright © 2014 Thai Rama</p>
+	</div>
+
 </div>
+
+    <!--Jquery-->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!--JqueryUI-->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+	<script type="text/javascript" src= "{% static 'flexnav/jquery.flexnav.js' %}"></script>
+	<script type='text/javascript' src= "{% static 'thairamaapp/script.js' %}"></script>
+	<script type='text/javascript' src= "{% static 'owlcarousel/owl.carousel.js' %}"></script>
 
 </body>	
 </html>

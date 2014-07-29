@@ -1,8 +1,15 @@
 {% extends "mybase.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home | Thai Rama{% endblock %}
 
 {% block main_content %}
-	<div id="index_image">&nbsp;</div>
+
+
+
+              <div class="owl-carousel">
+                <div class="item"><img src="{{MEDIA_URL}}images/other/1.jpg" alt="The Last of us"></div>
+                <div class="item"><img src="{{MEDIA_URL}}images/other/2.jpg" alt="The Last"></div>
+                <div class="item"><img src="{{MEDIA_URL}}images/other/3.jpg" alt="The"></div>
+              </div>
 {% endblock %}
 

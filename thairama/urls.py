@@ -10,7 +10,8 @@ from thairamaapp import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^admin/', include(admin.site.urls)),
+	url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
+    url(r'^admin/',  include(admin.site.urls)), # admin site
     url(r'^$', views.index, name='index'),
     url(r'^menu/$', views.menu, name='menu'),
     url(r'^menu/(?P<menu_cat_name>.*)/$', views.menu_cat, name='menu_cat'),
