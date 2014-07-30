@@ -238,3 +238,13 @@ textarea{
     height: auto;
     }
 
+.lb-image, .lb-dataContainer {
+ max-width: 100%;
+ height: auto !important;
+ width: 100%;
+}
+
+.lb-outerContainer {
+ max-width: 100%;
+ height: auto !important;
+}
