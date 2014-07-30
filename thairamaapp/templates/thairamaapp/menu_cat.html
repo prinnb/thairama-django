@@ -25,9 +25,9 @@
 			{% if food_cat_dict == food_cat %}
 				<!-- Display food menu (i.e., the items) in the food category -->
 				{% for food_menu in food_menu_list %} 
-					<li>
+					<li style = "overflow: hidden;">
 						<div>
-							<span style="float:left;"><p style= "margin-top: .1em; font-weight: 500; font-size: 105%;">{{ food_menu.food_item.name }}</p></span>
+							<span style="float:left;"><p style= "margin-top: .1em; font-weight: 400; font-size: 1.05em; ">{{ food_menu.food_item.name }}</p></span>
 
 							{% if food_menu.food_item.image %}
 								<span style="float:left; margin-left: 5px;">
@@ -39,15 +39,15 @@
 
 							<!-- Display price -->
 							{% if food_menu.price %}
-								<span style="float:right;"><p style= "margin-top: .1em; font-weight: 500; font-size: 105%;">${{ food_menu.price|floatformat:2 }}</p></span>
+								<span style="float:right;"><p style= "margin-top: .1em; font-weight: 400; font-size: .95em; padding-top:.1em;">${{ food_menu.price|floatformat:2 }}</p></span>
 							{% endif %}
 						</div>
 
 						{% if food_menu.food_item.description %}
-				        	<p class = "item_description" style="clear:both; font-size: 95%;">{{ food_menu.food_item.description|linebreaksbr }}</p>
+				        	<p class = "item_description" style="clear:both; font-weight: 150; font-size: .95em;">{{ food_menu.food_item.description|linebreaksbr }}</p>
 				        {% endif %}
 				        {% if food_menu.description %}
-				        	<p class = "item_description" style="clear:both; font-size: 95%;">{{ food_menu.description|linebreaksbr }}</p>
+				        	<p class = "item_description" style="clear:both; font-weight: 400; font-size: .95em;">{{ food_menu.description|linebreaksbr }}</p>
 				        {% endif %}
 					</li>
 				{% endfor %}
