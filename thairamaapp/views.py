@@ -57,13 +57,15 @@ def menu_cat(request, menu_cat_name):
 	menu_cat = get_object_or_404(MenuCategory, name=menu_cat_name)
 	food_menu_list = FoodMenu.objects.filter(menu_cat = menu_cat)
 	menu_dict = {}
-	
+	food_cat_list = []
 	for food_menu in food_menu_list:
+		if food_menu.food_cat not in food_cat_list:
+			food_cat_list.append(food_menu.food_cat)
 		if food_menu.food_cat not in menu_dict:
 			menu_dict[food_menu.food_cat] = [food_menu]
 		else:
 			menu_dict[food_menu.food_cat].append(food_menu)
 
-	context = {'menu_cat': menu_cat, 'menu_dict' : menu_dict}
+	context = {'menu_cat': menu_cat, 'menu_dict' : menu_dict, 'food_cat_list' : food_cat_list}
 	return render(request, 'thairamaapp/menu_cat.html', context)
 

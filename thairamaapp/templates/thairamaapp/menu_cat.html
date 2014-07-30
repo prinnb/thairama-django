@@ -5,41 +5,53 @@
 
 <div class = content_text>
 
-<h1 align = "center">{{ menu_cat.name }}</h1>
-<p  align = "center" style = "margin: 0;">{{ menu_cat.description }}</p>
+<h1 align = "center" id = "{{menu_cat.name}}">{{ menu_cat.name }}</h1>
+<p  align = "center" style = "margin: 0;">{{ menu_cat.description|linebreaksbr }}</p>
 {% if menu_dict %}
-	<ul>
 	
-	{% for food_cat, food_menu_list in menu_dict.items %} 
-		<li><h2 style = "font-size:180%; margin-bottom: .2em;">{{food_cat.name}}</h2>
-			<h5 style = "margin: 0;">{{food_cat.description}}</h5>
+	{% for food_cat in food_cat_list %} 
+	<a href="#{{food_cat.name}}">{{food_cat.name}}</a>
+	{% endfor %}
+	
+	<ul>
+	{% for food_cat in food_cat_list %} 
+		<li><h2 id = "{{food_cat.name}}" style = "font-size:180%; margin-bottom: .2em;">{{food_cat.name}}</h2>
+			<h5 style = "margin: 0;">{{food_cat.description|linebreaksbr }}</h5>
+			<a href="#">back to top</a>
 		</li>
 		<ul>
-		<!-- Display food menu (i.e., the items) in the food category -->
-		{% for food_menu in food_menu_list %} 
-			<li>
-				<div>
-					<span style="float:left;"><p style= "margin-top: .1em; font-weight: 500; font-size: 105%;">{{ food_menu.food_item.name }}</p></span>
 
-					{% if food_menu.food_item.image %}
-						<span style="float:left; margin-left: 5px;">
-							<a href={{ food_menu.food_item.image.url }} 
-							data-lightbox={{ food_menu.food_item.image.url }}>
-							<img width="13px" src= "{{MEDIA_URL}}images/other/camera_icon.png")></a>
-						</span>
-					{% endif %}
+		{% for food_cat_dict, food_menu_list in menu_dict.items %} 
+			{% if food_cat_dict == food_cat %}
+				<!-- Display food menu (i.e., the items) in the food category -->
+				{% for food_menu in food_menu_list %} 
+					<li>
+						<div>
+							<span style="float:left;"><p style= "margin-top: .1em; font-weight: 500; font-size: 105%;">{{ food_menu.food_item.name }}</p></span>
 
-					<!-- Display price -->
-					{% if food_menu.price %}
-						<span style="float:right;"><p style= "margin-top: .1em; font-weight: 500; font-size: 105%;">${{ food_menu.price|floatformat:2 }}</p></span>
-					{% endif %}
-				</div>
+							{% if food_menu.food_item.image %}
+								<span style="float:left; margin-left: 5px;">
+									<a href={{ food_menu.food_item.image.url }} 
+									data-lightbox={{ food_menu.food_item.image.url }}>
+									<img width="13px" src= "{{MEDIA_URL}}images/other/camera_icon.png")></a>
+								</span>
+							{% endif %}
 
-				{% if food_menu.food_item.description %}
-		        	<p class = "item_description" style="clear:both; font-size: 95%;">{{ food_menu.food_item.description }}</p>
-		        {% endif %}
-		        
-			</li>
+							<!-- Display price -->
+							{% if food_menu.price %}
+								<span style="float:right;"><p style= "margin-top: .1em; font-weight: 500; font-size: 105%;">${{ food_menu.price|floatformat:2 }}</p></span>
+							{% endif %}
+						</div>
+
+						{% if food_menu.food_item.description %}
+				        	<p class = "item_description" style="clear:both; font-size: 95%;">{{ food_menu.food_item.description|linebreaksbr }}</p>
+				        {% endif %}
+				        {% if food_menu.description %}
+				        	<p class = "item_description" style="clear:both; font-size: 95%;">{{ food_menu.description|linebreaksbr }}</p>
+				        {% endif %}
+					</li>
+				{% endfor %}
+			{% endif %}
 		{% endfor %}
 		</ul>
 	{% endfor %}
