@@ -238,3 +238,5 @@ textarea{
     height: auto;
     }
 
+    iframe, object, embed{max-width: 100%;}
+
