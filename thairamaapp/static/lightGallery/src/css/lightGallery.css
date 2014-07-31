@@ -386,7 +386,7 @@
 	font-size: 12px;
 }
 #lightGallery-Gallery .thumb_cont .thumb_info .close {
-	color: #FFFFFF;
+	color: rgba(0, 0, 0, 0.7);
 	display: block;
 	float: right !important;
 	width: 28px;
@@ -394,8 +394,6 @@
 	height: 28px;
 	border-radius: 2px;
 	margin-top: -4px;
-	background-color: #000;
-	background-color: rgba(0, 0, 0, 0.65);
 	-webkit-transition: background-color 0.3s ease 0s;
 	-moz-transition: background-color 0.3s ease 0s;
 	-o-transition: background-color 0.3s ease 0s;
