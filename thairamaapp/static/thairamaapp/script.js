@@ -15,6 +15,6 @@ $(document).ready(function(){
       // itemsMobile : false
 
       });
-$("#lightGallery").lightGallery();
+$(".lightGallery").lightGallery();
 
 });
