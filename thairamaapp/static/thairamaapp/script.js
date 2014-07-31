@@ -17,7 +17,7 @@ $(document).ready(function(){
       });
 
       $(".lightGallery").lightGallery({
-      caption : true;
+      caption : true,
       });
 
 });
