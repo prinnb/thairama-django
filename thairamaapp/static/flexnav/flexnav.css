@@ -119,7 +119,7 @@
       color: #666;
       font-style: normal; }
 
-@media all and (max-width: 1000px),  all and (max-device-width: 1000px) {
+@media all and (max-width: 63em),  all and (max-device-width: 63em) {
   .flexnav .touch-button .navicon {
       line-height: 3em;
   }
@@ -131,7 +131,7 @@
 
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 63em) {
 
   .flexnav .touch-button {
     height: 10em;
