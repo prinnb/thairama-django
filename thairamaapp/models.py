@@ -83,6 +83,7 @@ class ImageGallery(models.Model):
 	"""
 	name = models.CharField(max_length=50,  default = "untitled")
 	image = models.ImageField(upload_to = 'images/ImageGallery')
+	thumb = models.ImageField(upload_to = 'images/ImageGallery/thumb', null=True)
 	albums = models.ManyToManyField(AlbumGallery)
 	def __unicode__(self):
 		return self.name
