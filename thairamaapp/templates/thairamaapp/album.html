@@ -2,18 +2,14 @@
 
 {% block main_content %}
 <div class = content_text>
-	fgf
+	<div style = "max-width: 40em; box-sizing: border-box; margin: auto;">
+	    <ul class ="imageGallery" style= "list-style: none; padding-left: 0px;">
+	    	{% for image in images %}
+		    <li data-thumb="{{ image.thumb.url }}">
+		    <img style= "height: auto; width: 100%; display: block;" src= "{{ image.image.url }}" />
+		    </li>
+		    {% endfor %}
+	    </ul>
+	</div>
 </div>
-
-
-<div style = "max-width: 40em; box-sizing: border-box; margin: auto;">
-    <ul class ="imageGallery" style= "list-style: none; padding-left: 0px;">
-    	{% for image in images %}
-	    <li data-thumb="{{ image.thumb.url }}">
-	    <img style= "height: auto; width: 100%; display: block;" src= "{{ image.image.url }}" />
-	    </li>
-	    {% endfor %}
-    </ul>
-</div>
-
 {% endblock %}
