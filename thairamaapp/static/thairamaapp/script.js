@@ -19,7 +19,7 @@ $(document).ready(function(){
       $(".lightGallery").lightGallery({
       });
 
-      $('#imageGallery').lightSlider({
+      $('.imageGallery').lightSlider({
             gallery:true,
             minSlide:1,
             maxSlide:1,

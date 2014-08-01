@@ -2,8 +2,8 @@
 
 {% block main_content %}
 <div class = content_text>
-<div id = "sample" style = "max-width: 474px; box-sizing: border-box;">
-    <ul id="imageGallery" style= "list-style: none; padding-left: 0px;">
+<div style = "max-width: 474px; box-sizing: border-box;">
+    <ul class "imageGallery" style= "list-style: none; padding-left: 0px;">
 
 {% for image in images %}
 	    <li data-thumb="{{ image.thumb.url }}">
