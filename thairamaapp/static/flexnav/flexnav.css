@@ -125,9 +125,13 @@
   }
 
   .flexnav li a {
-    background: #a6a6a2;
+    background: #A39F93;
     line-height: 2em;
   }
+
+   .flexnav li a {
+    color: #494949;}
+
 
 }
 
