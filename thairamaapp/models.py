@@ -85,6 +85,9 @@ class ImageGallery(models.Model):
 	image = models.ImageField(upload_to = 'images/ImageGallery')
 	thumb = models.ImageField(upload_to = 'images/ImageGallery/thumb', null=True)
 	albums = models.ManyToManyField(AlbumGallery)
+	position = models.PositiveSmallIntegerField("Position")
+	class Meta:
+		ordering = ['position']
 	def __unicode__(self):
 		return self.name
 

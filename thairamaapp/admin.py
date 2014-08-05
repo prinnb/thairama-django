@@ -15,10 +15,19 @@ class FoodMenuSorterAdmin(admin.ModelAdmin):
 		FoodMenuInlineAdmin,
 	] 
 
+class ImageGalleryInlineAdmin(admin.TabularInline):
+    # define the sortable
+    sortable_field_name = "position"
+    model = ImageGallery
+
+class AlbumGalleryAdmin(admin.ModelAdmin):
+	inlines = [
+		ImageGalleryInlineAdmin,
+	] 	
+
 admin.site.register(Suggestion, SuggestionAdmin)
 admin.site.register(FoodItem)
 admin.site.register(FoodCategory)
 admin.site.register(MenuCategory)
 admin.site.register(FoodMenuSorter, FoodMenuSorterAdmin)
-admin.site.register(AlbumGallery)
-admin.site.register(ImageGallery)
+admin.site.register(AlbumGallery, AlbumGalleryAdmin)
