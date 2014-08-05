@@ -3,9 +3,17 @@
 {% block main_content %}
 
 <div class = content_text_2>
-	<p>The Best 100 Thai Restaurants in the U.S.A 2007 by <i>Best Thai Food Magazine</i></p>
 
-	<p>Featured in <i>The Herald</i>'s April 2004 "Uncommon delights at Rama 3"<p>
+		<ul class="lightGallery" style = "padding-top: 0px; margin-left: .3em; list-style: none">
+	    	<li data-src="{{MEDIA_URL}}images/other/press_1" data-title = press_1 style = "margin: 0;">
+	    		<p>The Best 100 Thai Restaurants in the U.S.A 2007 by <i>Best Thai Food</i> Magazine</p>
+	    	</li>
+
+	    	<li data-src="{{MEDIA_URL}}images/other/press_2" data-title = press_2 style = "margin: 0;">
+	    		<p>Featured in <i>The Herald</i>'s April 2004 "Uncommon delights at Rama 3"<p>
+	    	</li>
+	    </ul>
+
 </div>
 
 {% endblock %}
