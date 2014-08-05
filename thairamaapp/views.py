@@ -11,9 +11,9 @@ from django.core.context_processors import csrf
 def index(request):
     return render(request, 'thairamaapp/index.html', {})
 
-def about_us(request):
+def contact_us(request):
 	context = {}
-	return render(request, 'thairamaapp/about_us.html', context)
+	return render(request, 'thairamaapp/contact_us.html', context)
 
 def press(request):
 	context = {}
