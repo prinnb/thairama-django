@@ -84,7 +84,7 @@ class ImageGallery(models.Model):
 	name = models.CharField(max_length=50,  default = "untitled")
 	image = models.ImageField(upload_to = 'images/ImageGallery')
 	thumb = models.ImageField(upload_to = 'images/ImageGallery/thumb', null=True)
-	albums = models.ManyToManyField(AlbumGallery)
+	albums = models.ForeignKey(AlbumGallery)
 	position = models.PositiveSmallIntegerField("Position")
 	class Meta:
 		ordering = ['position']
