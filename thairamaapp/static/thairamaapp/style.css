@@ -66,7 +66,7 @@ a {
 }
 
 .content_text ul ul li{
-	border-bottom: 1px solid rgba(75, 72, 68, .25);
+	border-bottom: .08em solid rgba(75, 72, 68, .25);
 	margin-left:2.8em;
 	margin-right:2.8em;
 	margin-top: .6em;
