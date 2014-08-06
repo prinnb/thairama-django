@@ -1,6 +1,17 @@
 {% extends "mybase.html" %}
 
 {% block main_content %}
+<div class = content_text>
 
-menu
+	{% if menu_cats %}
+	    <ul>
+	    {% for menu_cat in menu_cats %}
+	        <li><a href="{% url 'menu_cat' menu_cat.name %}">{{ menu_cat.name }}</a></li>
+	    {% endfor %}
+	    </ul>
+	{% else %}
+	    <p>No Menu Categories</p>
+	{% endif %}
+
+</div>
 {% endblock %}
