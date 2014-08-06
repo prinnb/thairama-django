@@ -4,6 +4,7 @@ html, body{
 	color: #F5F4EE;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: none;
+    background-color: #323232;
 }
 
 body{
@@ -37,6 +38,7 @@ a {
 	padding-bottom: 6em;
 	margin: 0 auto;
 	width: 60%;
+	min-height: 17.8em;
 }
 
 .content_text ul{
@@ -84,6 +86,7 @@ a {
 	padding-bottom: 6em;
 	margin: 0 auto;
 	width: 60%;
+	min-height: 17.8em;
 }
 
 .footer{ 
@@ -143,7 +146,7 @@ a {
 
 textarea, input:not([type=submit]):not([type=file]) {
     border: none; 
-    padding: 5px;
+    padding: .5em;
     background: rgba(255,255,255,0.08);
     margin: 0 0 10px 0;
     color: #D3D3D3;
@@ -155,7 +158,8 @@ textarea{
 }
 
 #suggestion_form{
-	width: 500px;
+	width: 70%;
+	min-width: 20em;
     clear: both;
 }
 
@@ -226,10 +230,12 @@ textarea{
 	}
 	.content_text{
 	width: 85%;
+	padding-top: 9em;
 	}
 
 	.content_text_2{
 	width: 85%;
+	padding-top: 9em;
 	}
 
 	.owl-carousel{
@@ -242,8 +248,6 @@ textarea{
 	margin-right:.8em;
 	}
 }
-
-
 
     .owl-carousel .item img{
     display: block;
@@ -273,4 +277,14 @@ textarea{
 
 .content_text_2 a{
 	color: #F5F4EE;
+}
+
+.input_1
+{
+    background-color: #323232;
+	height: 2em;
+	width: 10em;
+    color: #757575;
+    border: 0;
+    border-radius:.3em;
 }
