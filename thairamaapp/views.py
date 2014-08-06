@@ -24,7 +24,7 @@ def suggestion(request):
 		form = SuggestionForm(request.POST)
 		if form.is_valid():
 			form.save()
-			return HttpResponseRedirect('/thairamaapp/') 
+			return HttpResponseRedirect('/') 
 
 	elif request.user.is_authenticated():
 		#automatically fill out name and email for logged in user
