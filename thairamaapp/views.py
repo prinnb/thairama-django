@@ -45,7 +45,7 @@ def gallery(request):
 def album(request, album_name):
 	album = get_object_or_404(AlbumGallery, name=album_name)
 	images = album.imagegallery_set.all()
-	context = {'images': images}
+	context = {'images': images, 'album': album}
 	return render(request, 'thairamaapp/album.html', context)
 
 def menu(request):
