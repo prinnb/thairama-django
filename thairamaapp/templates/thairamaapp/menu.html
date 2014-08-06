@@ -5,7 +5,8 @@
 <div class = content_text>
 
 	{% if menu_cats %}
-	    <ul>
+		<h4 style = "margin-bottom: .5em;" >Please Select Menu Category:</h4>
+	    <ul style = "padding-top: .1em;">
 	    {% for menu_cat in menu_cats %}
 	        <li><a href="{% url 'menu_cat' menu_cat.name %}">{{ menu_cat.name }}</a></li>
 	    {% endfor %}
@@ -13,6 +14,7 @@
 	{% else %}
 	    <p>No Menu Category</p>
 	{% endif %}
+	<div style ="margin-top: 3em;"><a style = "color: #4B4844;" href='{{MEDIA_URL}}thairama_togo.pdf'><h4>Download Togo Menu</h4></a></div>
 
 </div>
 {% endblock %}

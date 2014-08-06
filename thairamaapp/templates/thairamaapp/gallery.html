@@ -6,7 +6,8 @@
 <div class = content_text>
 
 	{% if albums %}
-	    <ul>
+	    <h4 style = "margin-bottom: .5em;" >Please Select Gallery Album:</h4>
+	    <ul style = "padding-top: .1em;">
 	    {% for album in albums %}
 	        <li><a href="{% url 'album' album.name %}">{{ album.name }}</a></li>
 	    {% endfor %}
@@ -14,8 +15,6 @@
 	{% else %}
 	    <p>No Album</p>
 	{% endif %}
-
-
 
 
 </div>
