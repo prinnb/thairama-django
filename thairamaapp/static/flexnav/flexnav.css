@@ -48,12 +48,12 @@
     padding: .33em;
     z-index: 2;
     overflow: hidden;
-    color: #757575;
+    color: #7B7773;
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 
   .flexnav li a:hover {
-    color: #494949;}
+    color: #4B4844;}
 
   .flexnav li ul {
     width: 100%; }
@@ -65,8 +65,9 @@
     overflow: visible; }
   .flexnav li ul li a {
     display: block;
-    color: #494949;
-    background: rgba(163, 159, 147, .75);}
+    color: #4B4844;
+    padding-left: 1em;
+    background: rgba(236, 234, 224, .25);}
   .flexnav ul li ul li a {
     background: #bfbfbc; }
   .flexnav ul li ul li ul li a {
@@ -85,7 +86,7 @@
       cursor: pointer; }
     .flexnav .touch-button .navicon {
       position: relative;
-      color: #666;
+      color: #7B7773;
       font-style: normal;
       }
 
@@ -96,6 +97,7 @@
   background: #323232;
   color: #222222;
   cursor: pointer;
+  padding-left: .8em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
   .menu-button.one-page {
     position: fixed;
@@ -116,7 +118,7 @@
       font-size: 16px;
       position: relative;
       top: 1em;
-      color: #666;
+      color: #7B7773;
       font-style: normal; }
 
 @media all and (max-width: 63em),  all and (max-device-width: 63em) {
@@ -125,12 +127,17 @@
   }
 
   .flexnav li a {
-    background: #A39F93;
+    background: #AAAC5F;
     line-height: 2em;
+    padding-left: 1em;
   }
 
    .flexnav li a {
-    color: #494949;}
+    color: #4B4844;}
+
+  .flexnav li ul li a {
+  background: rgba(236, 234, 224, .68);
+  }
 
 
 }

@@ -1,7 +1,7 @@
 html, body{
 	height: 100%;
 	margin: 0;
-	color: #F5F4EE;
+	color: #4B4844;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: none;
     background-color: #323232;
@@ -11,10 +11,17 @@ body{
 	font-family: 'Lato', sans-serif;
 }
 
-a:link {color:#757575;} 
-a:visited {color:#757575;}
-a:hover {color:#F5F4EE;} 
-a:active {color:#F5F4EE;} 
+.main_content a:link {color:rgba(75, 72, 68, .50);} 
+.main_content a:visited {color:rgba(75, 72, 68, .50);}
+.main_content a:hover {color:#8E8F4F;} 
+.main_content a:active {color:#8E8F4F;} 
+
+
+a:link {color:#7B7773;} 
+a:visited {color:#7B7773;}
+a:hover {color:#ECEAE0;} 
+a:active {color:#ECEAE0;} 
+
 a {
     text-decoration: none;
 }
@@ -29,7 +36,7 @@ a {
 
 .main_content{ 
 	width:100%; 
-	background-color:#4E4C4B;  
+	background-color:#B9B2AD;  
 	float:left;
 }
 
@@ -59,7 +66,7 @@ a {
 }
 
 .content_text ul ul li{
-	border-bottom: 1px solid #757575;
+	border-bottom: 1px solid rgba(75, 72, 68, .25);
 	margin-left:2.8em;
 	margin-right:2.8em;
 	margin-top: .6em;
@@ -102,7 +109,7 @@ a {
 	font-weight: 100;
 	margin:2px;
 	font-size:90%;
-	color: #757575;
+	color: #7B7773;
 }
 
 #logo{
@@ -147,9 +154,9 @@ a {
 textarea, input:not([type=submit]):not([type=file]) {
     border: none; 
     padding: .5em;
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.3);
     margin: 0 0 10px 0;
-    color: #D3D3D3;
+    color: #4B4844;
 }
 
 textarea{
@@ -188,22 +195,6 @@ textarea{
 }
 
 /*********************************************************************************/
-/* About us                                                                      */
-/*********************************************************************************/
-
-#left_aboutus {
-  width: 60%;;
-  float:left;
- }
-
-#right_aboutus {
-  width: 35%;
-  float:right;
-  border-left: 1px solid #757575;
-  padding-left: 25px;
- } 
-
-/*********************************************************************************/
 /* Menu Bar                                                                      */
 /*********************************************************************************/
 @media all and (min-width: 63em){
@@ -216,9 +207,9 @@ textarea{
 		height: 100%;
 	}
 	nav ul li:hover {
-	background: linear-gradient(top, #949085 0%, #A39F93 40%);
-	background: -moz-linear-gradient(top, #949085 0%, #A39F93 40%);
-	background: -webkit-linear-gradient(top, #949085 0%,#A39F93 40%);
+	background: linear-gradient(top, #9C9E57 0%, #AAAC5F 40%);
+	background: -moz-linear-gradient(top, #9C9E57 0%, #AAAC5F 40%);
+	background: -webkit-linear-gradient(top, #9C9E57 0%,#AAAC5F 40%);
 	}
 }
 
@@ -281,10 +272,10 @@ textarea{
 
 .input_1
 {
-    background-color: #323232;
+    background-color: #4B4844;
 	height: 2em;
 	width: 10em;
-    color: #757575;
+    color: #AAAC5F;
     border: 0;
     border-radius:.3em;
     -webkit-appearance: none;
