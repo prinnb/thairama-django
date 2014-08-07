@@ -11,7 +11,7 @@
 	
 	<div style = "text-align: center; color: rgba(75, 72, 68, .50); margin-top: .3em; font-size: 105%;">
 	{% for food_cat in food_cat_list %} 
-		<a href="#{{food_cat.name}}">{{food_cat.name}}</a>
+		<a href='#{{food_cat.name.split|join:"_"}}'>{{food_cat.name}}</a>
 		{% if not forloop.last %}  
 			&nbsp; | &nbsp;
 		{% endif %}
@@ -21,7 +21,7 @@
 	<ul>
 	{% for food_cat in food_cat_list %} 
 		<li>
-			<h2 id = "{{food_cat.name}}" style = "font-size:180%; padding-bottom: .18em; margin-bottom: 0; background-color: #AAAC5F; padding-top: .25em; margin-top: .65em; padding-left: .3em;">{{food_cat.name}}</h2>
+			<h2 id = '{{food_cat.name.split|join:"_"}}' style = "font-size:180%; padding-bottom: .18em; margin-bottom: 0; background-color: #AAAC5F; padding-top: .25em; margin-top: .65em; padding-left: .3em;">{{food_cat.name}}</h2>
 			<h5 style = "margin: 0; background-color: #AAAC5F; padding-left: .6506em;">{{food_cat.description|linebreaksbr }}</h5>
 			<a style = "padding-left: .54em;" href="#">back to top</a>
 		</li>
