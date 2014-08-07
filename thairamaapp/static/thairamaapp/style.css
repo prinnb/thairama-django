@@ -225,6 +225,19 @@ textarea{
 
 .normal_food_cat_list{
 	list-style: none;
+	padding-left: 0px;
+	margin-left: 5%;
+	background-color: rgba(223, 214, 208, .38);
+	width: 16%;
+	height: 100%;
+	top: 0;
+	margin-top: 0;
+	padding-top: 18em;
+	line-height: 2em;
+}
+
+.normal_food_cat_list a{
+	padding-left: 1em;
 }
 
 .mobile_food_cat_list{
