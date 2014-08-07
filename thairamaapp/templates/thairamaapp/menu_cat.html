@@ -4,6 +4,12 @@
 
 {% block main_content %}
 
+<ul style = "position: fixed;">
+{% for food_cat in food_cat_list %} 
+	<li><a href='#{{food_cat.name|cleanstring}}'>{{food_cat.name}}</a></li>
+{% endfor %}
+</ul>
+
 <div class = content_text>
 
 <h1 align = "center" id = "{{menu_cat.name}}">{{ menu_cat.name }}</h1>
