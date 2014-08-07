@@ -24,7 +24,9 @@ $(document).ready(function(){
             minSlide:1,
             maxSlide:1,
             currentPagerPosition:'left'
-      }); 
+      });
+
+
 
       $(function(){
      
@@ -40,7 +42,7 @@ $(document).ready(function(){
                 }
             }
         });
-    });
+    }); 
 
 });
 
