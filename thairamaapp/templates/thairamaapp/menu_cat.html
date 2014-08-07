@@ -4,7 +4,7 @@
 
 {% block main_content %}
 
-<ul style = "position: fixed;">
+<ul class = "normal_food_cat_list" style = "position: fixed;">
 {% for food_cat in food_cat_list %} 
 	<li><a href='#{{food_cat.name|cleanstring}}'>{{food_cat.name}}</a></li>
 {% endfor %}
@@ -16,7 +16,7 @@
 <p  align = "center" style = "margin: 0;">{{ menu_cat.description|linebreaksbr }}</p>
 {% if menu_dict %}
 	
-	<div style = "text-align: center; color: rgba(75, 72, 68, .50); margin-top: .3em; font-size: 105%;">
+	<div class = "mobile_food_cat_list" style = "text-align: center; color: rgba(75, 72, 68, .50); margin-top: .3em; font-size: 105%; display: none;">
 	{% for food_cat in food_cat_list %} 
 		<a href='#{{food_cat.name|cleanstring}}'>{{food_cat.name}}</a>
 		{% if not forloop.last %}  
