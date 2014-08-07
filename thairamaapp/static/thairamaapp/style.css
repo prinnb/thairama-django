@@ -228,7 +228,7 @@ textarea{
 	list-style: none;
 	padding-left: 0px;
 	margin-left: 5%;
-	background-color: rgba(223, 214, 208, .38);
+	background-color: rgba(223, 214, 208, .30);
 	width: 16%;
 	height: 100%;
 	top: 0;
@@ -238,7 +238,7 @@ textarea{
 }
 
 .normal_food_cat_list a{
-	padding-left: 1em;
+	padding-left: 6%;
 }
 
 .mobile_food_cat_list{
