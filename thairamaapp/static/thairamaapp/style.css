@@ -248,6 +248,9 @@ textarea{
 	font-size: 105%; 
 }
 
+.to_top{
+	padding-left: .54em;
+}
 
 
 @media screen and (min-width: 63em ) {
@@ -273,6 +276,10 @@ textarea{
 
 
 	.mobile_food_cat_list{
+		display:none;
+	}
+
+	.to_top{
 		display:none;
 	}
 }
