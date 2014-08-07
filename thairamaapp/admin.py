@@ -24,7 +24,7 @@ class ImageGalleryInlineAdmin(admin.TabularInline):
 class AlbumGalleryAdmin(admin.ModelAdmin):
 	inlines = [
 		ImageGalleryInlineAdmin,
-	] 	
+	]
 
 admin.site.register(Suggestion, SuggestionAdmin)
 admin.site.register(FoodItem)

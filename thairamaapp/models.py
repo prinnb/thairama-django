@@ -74,6 +74,9 @@ class AlbumGallery(models.Model):
 	"""
 	name = models.CharField(max_length=50, default = "untitled")
 	description = models.TextField(null=True, blank=True)
+	position = models.PositiveSmallIntegerField("Position")
+	class Meta:
+		ordering = ['position']
 	def __unicode__(self):
 		return self.name
         
