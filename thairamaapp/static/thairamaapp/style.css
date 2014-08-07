@@ -88,14 +88,6 @@ a {
 	margin-top: 0;
 }
 
-.content_text_2{
-	padding-top: 6em;
-	padding-bottom: 6em;
-	margin: 0 auto;
-	width: 60%;
-	min-height: 17.8em;
-}
-
 .footer{ 
 	width: 100%;
 	float:left;
@@ -224,11 +216,6 @@ textarea{
 	padding-top: 9em;
 	}
 
-	.content_text_2{
-	width: 85%;
-	padding-top: 9em;
-	}
-
 	.owl-carousel{
 		padding-top: 5.7em;
 	}
@@ -264,10 +251,6 @@ textarea{
 #hours_div table tr td p{
 	margin-bottom: .2em;
 	margin-top: .2em;
-}
-
-.content_text_2 a{
-	color: #F5F4EE;
 }
 
 .input_1
