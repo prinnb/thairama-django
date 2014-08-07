@@ -37,7 +37,7 @@ $(document).ready(function(){
                 $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
                 if ($target.length) {
                     var targetOffset = $target.offset().top;
-                    $('html,body').animate({scrollTop: targetOffset}, 800); // change number for scroll speed, higher = slower
+                    $('html,body').animate({scrollTop: targetOffset}, 1200); // change number for scroll speed, higher = slower
                     return false;
                 }
             }
