@@ -6,4 +6,4 @@ register = template.Library()
 @register.filter
 @stringfilter
 def cleanstring(value):
-    return value.replace('&', '_').replace('$', '_').replace(' ', '_')
+    return value.replace('&', '_').replace('$', '_').replace('.', '_').replace(' ', '_')
