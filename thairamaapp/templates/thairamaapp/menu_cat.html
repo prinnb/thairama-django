@@ -20,9 +20,10 @@
 
 	<ul>
 	{% for food_cat in food_cat_list %} 
-		<li><h2 id = "{{food_cat.name}}" style = "font-size:180%; padding-bottom: .18em; margin-bottom: 0; background-color: #AAAC5F; padding-top: .25em; margin-top: .65em;">{{food_cat.name}}</h2>
-			<h5 style = "margin: 0; background-color: #AAAC5F; ">{{food_cat.description|linebreaksbr }}</h5>
-			<a href="#">back to top</a>
+		<li>
+			<h2 id = "{{food_cat.name}}" style = "font-size:180%; padding-bottom: .18em; margin-bottom: 0; background-color: #AAAC5F; padding-top: .25em; margin-top: .65em; padding-left: .3em;">{{food_cat.name}}</h2>
+			<h5 style = "margin: 0; background-color: #AAAC5F; padding-left: .6506em;">{{food_cat.description|linebreaksbr }}</h5>
+			<a style = "padding-left: .54em;" href="#">back to top</a>
 		</li>
 		<ul>
 
