@@ -252,11 +252,44 @@ textarea{
 	padding-left: .54em;
 }
 
+.ramahouse{
+	background-color: rgba(51,51,50, .75); 
+	margin-bottom: 2em; 
+	text-align: center; 
+	margin-right: 1.5em;
+
+}
+
+.ramahouse a {
+	display: block;
+}
+.ramahouse a p{
+	text-align:center; 
+	font-size: 108%; 
+	margin: 0; 
+	color: rgba(255,255,255,.3); 
+	padding-top: 1.3em; 
+	padding-bottom: .3em;
+	font-weight: 300;
+}
+
+.ramahouse a img{
+	max-width: 90%;
+}
+
+#ramahouse1{
+	margin-top: 1.5em;
+}
+
+#ramahouse2{
+	margin-right: 0;
+	margin-top: 2em;
+}
 
 @media screen and (min-width: 63em ) {
-  .leftColumn { width: 60%;}
+  .leftColumn { width: 53%;}
  
-  .rightColumn { position: absolute; top: 0; right: 0; width: 45%; height: 100%;}
+  .rightColumn { position: absolute; top: 0; right: 0; width: 47%; height: 100%;}
 }
 
 @media all and (min-width: 63em){
@@ -280,6 +313,10 @@ textarea{
 	}
 
 	.to_top{
+		display:none;
+	}
+
+	#ramahouse2{
 		display:none;
 	}
 }
@@ -311,6 +348,10 @@ textarea{
 
 	#map_iframe{
 		max-height: 18em;
+	}
+
+	#ramahouse1{
+		display:none;
 	}
 
 }
