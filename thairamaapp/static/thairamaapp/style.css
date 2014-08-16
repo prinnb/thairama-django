@@ -254,7 +254,6 @@ textarea{
 
 .ramahouse{
 	background-color: rgba(51,51,50, .75); 
-	margin-bottom: 2em; 
 	text-align: center; 
 	margin-right: 1.5em;
 
@@ -262,6 +261,7 @@ textarea{
 
 .ramahouse a {
 	display: block;
+	padding-bottom: .5em;
 }
 .ramahouse a p{
 	text-align:center; 
@@ -274,7 +274,7 @@ textarea{
 }
 
 .ramahouse a img{
-	max-width: 90%;
+	max-width: 85%;
 }
 
 #ramahouse1{
