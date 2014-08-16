@@ -15,7 +15,7 @@ class Suggestion(models.Model):
 	post_date = models.DateTimeField('date posted', auto_now = True)
 	content = models.TextField()   
 	def __unicode__(self):
-		return str(self.post_date)
+		return self.name + " | " + str(self.post_date)
 
 class MenuCategory(models.Model):
 	"""
