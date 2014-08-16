@@ -309,4 +309,8 @@ textarea{
 		display:none;
 	}
 
+	#map_iframe{
+		max-height: 18em;
+	}
+
 }
