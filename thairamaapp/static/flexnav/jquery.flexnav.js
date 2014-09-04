@@ -98,6 +98,7 @@
             timeout: settings.hoverIntentTimeout
           });
         } else if (settings.hoverIntent === false) {
+          $('.item-with-ul').unbind('mouseenter').unbind('mouseleave'); //added to fix bug
           return $('.item-with-ul').on('mouseenter', showMenu).on('mouseleave', resetMenu);
         }
       }

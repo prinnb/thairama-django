@@ -176,8 +176,6 @@
 
       overflow: visible;
       height: 10em;
-      padding-left: 3em;
-      padding-right: 3em;
       border-left: 3px solid rgba(0, 0, 0, 0.075);
       }
     .flexnav li:first-child{
@@ -189,7 +187,10 @@
       line-height: 10em;
       padding-top: 0px;
       padding-bottom: 0px;
-
+      padding-left: 3em;
+      padding-right: 3em;
+      min-width: 3.3em;
+      text-align: center;
        }
     .flexnav li > ul {
      position: absolute;
@@ -203,6 +204,8 @@
     .flexnav li ul li a {
       border-bottom: none; 
       line-height: 400%;
+      padding-left: 0;
+      padding-right: 0;
     }
     .flexnav li ul.open {
       display: block;
