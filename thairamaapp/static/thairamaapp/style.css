@@ -36,7 +36,9 @@ a {
 
 .main_content{ 
 	width:100%; 
-	background-color:#B9B2AD;  
+	/*
+	background-color:#B9B2AD;  */
+	background-image: url(media/images/other/web_food_background.jpg);
 	float:left;
 }
 
