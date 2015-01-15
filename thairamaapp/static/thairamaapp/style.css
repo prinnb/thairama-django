@@ -382,7 +382,7 @@ textarea{
 	}
 }
 
-@media all and (max-width: 63em),  screen and (max-device-width: 63em) and (orientation: portrait) {
+@media screen and (max-device-width: 63em) and (orientation: portrait) {
 	#normal_slide{ 
 		display:none;
 	}
