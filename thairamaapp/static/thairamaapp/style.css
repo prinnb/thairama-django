@@ -382,6 +382,12 @@ textarea{
 	}
 }
 
+@media all and (max-width: 63em) and (min-device-width: 63em){
+	#normal_slide{ 
+		display:none;
+	}
+}
+
 @media screen and (max-device-width: 63em) and (orientation: portrait) {
 	#normal_slide{ 
 		display:none;
