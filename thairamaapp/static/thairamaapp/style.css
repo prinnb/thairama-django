@@ -38,7 +38,7 @@ a {
 	width:100%; 
 	/*
 	background-color:#B9B2AD;  */
-	background-image: url(media/images/other/web_food_background.jpg) no-repeat center center fixed; 
+	background: url(media/images/other/web_food_background.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
