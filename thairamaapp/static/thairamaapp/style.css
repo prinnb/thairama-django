@@ -344,6 +344,35 @@ textarea{
 		float:left;
 	}
 
+	.gallery_pages{ 
+		width:100%; 
+		background: url(media/images/other/web_silk_background.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		float:left;
+	}
+
+	.press_pages{ 
+		width:100%; 
+		background: url(media/images/other/web_giant_background.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		float:left;
+	}
+
+	.suggestion_pages{ 
+		width:100%; 
+		background: url(media/images/other/web_flower_background.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		float:left;
+	}
 }
 
 @media all and (max-width: 63em),  all and (max-device-width: 63em) {

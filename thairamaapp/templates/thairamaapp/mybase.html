@@ -59,7 +59,7 @@
 
 <div class="footer" style = "z-index: 800">
 
-	<a href= "http://www.fb.com/thairamarestaurant" id ="fb_href">
+	<a href= "http://www.fb.com/thairamarestaurant" id ="fb_href" target="_blank">
 		<img src="{{MEDIA_URL}}images/other/fb_icon_1.svg" style = "max-width: 4%; min-width: 1.5em; float: right; padding-right:.8%; padding-top:.3em"
 		onmouseover="this.src='{{MEDIA_URL}}images/other/fb_icon_2.svg'" 
 		onmouseout="this.src='{{MEDIA_URL}}images/other/fb_icon_1.svg'"/>
@@ -71,9 +71,9 @@
 		<p style = "margin-top: 0px; margin-bottom: 0px; line-height: 1.7em; font-size: 250%">We do takeout!</p>
 	</div>
 	<div style = "text-align: left; display: inline-block; border-left: solid thin rgba(123,119,115,.5); padding-left: 1em; margin-left: 1em;" >
-	<p><b><a href="tel:+14254930026">Tel: 425-493-0026</a> | <a href="fax:+14254930027">Fax: 425-493-0027</a></b></p>
+	<p style = "font-size: 120%"><b><a href="tel:+14254930026">Tel: 425-493-0026</a> | <a href="fax:+14254930027">Fax: 425-493-0027</a></b></p>
 	<p><b>12190 Village Center Pl, Mukilteo, WA 98275</b></p>
-	<p>Copyright © 2015 Thai Rama</p>
+	<span><p style = "display: inline;">Copyright © 2015 Thai Rama. </p></span><span><a href="{% url 'credits' %}"><p style = "display: inline;">credits</p></a></span>
 	</div>
 	</div>
 
