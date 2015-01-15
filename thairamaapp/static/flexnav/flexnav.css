@@ -142,7 +142,7 @@
 
 }
 
-@media all and (min-width: 63em) {
+@media all and (min-width: 63em){
 
   .flexnav .touch-button {
     height: 10em;

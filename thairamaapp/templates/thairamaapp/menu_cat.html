@@ -3,19 +3,19 @@
 {% block title %}{{ menu_cat.name }} | Thai Rama{% endblock %}
 
 {% block main_content %}
-
+<div class = menu_pages>
 <ul class = "normal_food_cat_list" style = "position: fixed;">
 {% for food_cat in food_cat_list %} 
 	<li><a href='#{{food_cat.name|cleanstring}}'>{{food_cat.name}}</a></li>
 {% endfor %}
 
-	<li style = "margin-top: 1.7em; border-top: .08em solid rgba(75, 72, 68, .25);"><a href="#logo">back to top</a></li>
+	<li style = "margin-top: 1.7em; border-top: .08em solid rgba(236, 234, 224, .25);"><a href="#logo">back to top</a></li>
 </ul>
 
 <div class = content_text>
 
 <h1 align = "center" id = "{{menu_cat.name}}">{{ menu_cat.name }}</h1>
-<p  align = "center" style = "margin: 0;">{{ menu_cat.description|linebreaksbr }}</p>
+<h4  align = "center" style = "margin: 0;">{{ menu_cat.description|linebreaksbr }}</h4>
 {% if menu_dict %}
 	
 	<div class = "mobile_food_cat_list">
@@ -61,10 +61,10 @@
 						</div>
 
 						{% if food_menu.food_item.description %}
-				        	<p class = "item_description" style="clear:both; font-size: .95em; font-weight: 300;">{{ food_menu.food_item.description|linebreaksbr }}</p>
+				        	<p class = "item_description" style="font-weight: 300; opacity: 0.75;">{{ food_menu.food_item.description|linebreaksbr }}</p>
 				        {% endif %}
 				        {% if food_menu.description %}
-				        	<p class = "item_description" style="clear:both; font-size: .95em; font-weight: 500;">{{ food_menu.description|linebreaksbr }}</p>
+				        	<p class = "item_description" style="font-weight: 500;">{{ food_menu.description|linebreaksbr }}</p>
 				        {% endif %}
 					</li>
 				{% endfor %}
@@ -77,5 +77,6 @@
     <p>No Menu</p>
 {% endif %}
 
+</div>
 </div>
 {% endblock %}
