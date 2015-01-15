@@ -352,7 +352,7 @@ textarea{
 		-o-background-size: cover;
 		background-size: cover;
 		float:left;
-	}
+	}http://0.0.0.0:5000/
 
 	.press_pages{ 
 		width:100%; 
@@ -379,10 +379,13 @@ textarea{
 	}
 }
 
-@media all and (max-width: 63em),  all and (max-device-width: 63em) {
+@media all and (max-width: 63em){
 	#normal_slide{ 
 		display:none;
 	}
+}
+
+@media all and (max-width: 63em),  all and (max-device-width: 63em) {
 
 	#logo{
 		width: 100%;
