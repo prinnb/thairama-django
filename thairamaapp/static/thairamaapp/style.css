@@ -373,9 +373,17 @@ textarea{
 		background-size: cover;
 		float:left;
 	}
+
+	#mobile_slide{ 
+		display:none;
+	}
 }
 
 @media all and (max-width: 63em),  all and (max-device-width: 63em) {
+	#normal_slide{ 
+		display:none;
+	}
+
 	#logo{
 		width: 100%;
 		margin: 0;
