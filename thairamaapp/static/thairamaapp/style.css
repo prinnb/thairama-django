@@ -374,16 +374,26 @@ textarea{
 		float:left;
 	}
 
+}
+
+@media all and (min-width: 63em){
 	#mobile_slide{ 
 		display:none;
 	}
 }
 
-@media all and (max-width: 63em){
+@media all and (max-width: 63em),  screen and (max-device-width: 63em) and (orientation: portrait) {
 	#normal_slide{ 
 		display:none;
 	}
 }
+
+@media screen and (max-device-width: 63em) and (orientation: landscape) {
+	#mobile_slide{ 
+		display:none;
+	}
+}
+
 
 @media all and (max-width: 63em),  all and (max-device-width: 63em) {
 
