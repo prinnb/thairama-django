@@ -25,7 +25,8 @@ $(document).ready(function(){
             enableTouch:true,
             enableDrag: true,
             item:1,
-            auto: true
+            auto: true,
+            loop: true
       });
 
 

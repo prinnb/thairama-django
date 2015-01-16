@@ -435,3 +435,7 @@ textarea{
 	}
 
 }
+
+.lSSlideOuter .lSPager.lSGallery{
+	padding-top: 0px;
+}
