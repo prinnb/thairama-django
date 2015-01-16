@@ -6,6 +6,7 @@ from thairamaapp.models import MenuCategory,FoodMenu, FoodCategory, AlbumGallery
 from forms import SuggestionForm
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
+from django.core.mail import send_mail
 
 # Create your views here.
 def index(request):
@@ -28,6 +29,7 @@ def suggestion(request):
 		form = SuggestionForm(request.POST)
 		if form.is_valid():
 			form.save()
+			send_mail('Subject here', 'Here is the message.', 'prinnb@hotmail.com', ['prinn_band94@hotmail.com'], fail_silently=False)
 			return HttpResponseRedirect('/')
 
 	elif request.user.is_authenticated():
