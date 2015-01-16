@@ -30,8 +30,8 @@ def suggestion(request):
 		form = SuggestionForm(request.POST)
 		if form.is_valid():
 			form.save()
-			email = EmailMessage('Hello', 'World', to=['prinnb@hotmail.com'])
-			email.send()
+			send_mail('Subject here', 'Here is the message.', 'prinnb@gmail.com',
+    ['prinnb@hotmail.com'], fail_silently=False)
 			return HttpResponseRedirect('/')
 
 	elif request.user.is_authenticated():
