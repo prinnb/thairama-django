@@ -7,6 +7,7 @@ from forms import SuggestionForm
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 
 # Create your views here.
 def index(request):
@@ -29,7 +30,8 @@ def suggestion(request):
 		form = SuggestionForm(request.POST)
 		if form.is_valid():
 			form.save()
-			send_mail('Subject here', 'Here is the message.', 'prinnb@gmail.com', ['prinn_band94@hotmail.com'], fail_silently=False)
+			email = EmailMessage('Hello', 'World', to=['prinnb@hotmail.com'])
+			email.send()
 			return HttpResponseRedirect('/')
 
 	elif request.user.is_authenticated():
