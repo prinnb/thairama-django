@@ -21,11 +21,11 @@ $(document).ready(function(){
 
       $('.imageGallery').lightSlider({
             gallery:true,
-            minSlide:1,
-            maxSlide:1,
             currentPagerPosition:'left',
             enableTouch:true,
-            enableDrag: true
+            enableDrag: true,
+            item:1,
+            auto: true
       });
 
 
