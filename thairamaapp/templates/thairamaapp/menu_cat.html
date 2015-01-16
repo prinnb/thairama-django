@@ -15,7 +15,7 @@
 <div class = content_text>
 
 <h1 align = "center" id = "{{menu_cat.name}}">{{ menu_cat.name }}</h1>
-<h4  align = "center" style = "margin: 0;">{{ menu_cat.description|linebreaksbr }}</h4>
+<h4  align = "center" style = "margin: 0; font-weight: normal;">{{ menu_cat.description|linebreaksbr }}</h4>
 {% if menu_dict %}
 	
 	<div class = "mobile_food_cat_list">
@@ -31,7 +31,7 @@
 	{% for food_cat in food_cat_list %} 
 		<li>
 			<h2 id = '{{food_cat.name|cleanstring}}' style = "font-size:180%; padding-bottom: .18em; margin-bottom: 0; padding-top: .5em; margin-top: .65em; padding-left: .3em;">{{food_cat.name}}</h2>
-			<h5 style = "margin: 0; padding-left: .6506em; margin-bottom: .2em;">{{food_cat.description|linebreaksbr }}</h5>
+			<h5 style = "margin: 0; padding-left: .6506em; margin-bottom: .2em; font-weight: normal;">{{food_cat.description|linebreaksbr }}</h5>
 			<a class = "to_top" href="#logo">back to top</a>
 		</li>
 		<ul>
