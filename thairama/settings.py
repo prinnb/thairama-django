@@ -122,15 +122,15 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
 )
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-        'NAME': 'd8ntcua36nmm85',
-        'HOST': 'ec2-50-19-219-235.compute-1.amazonaws.com',
-        'PORT': '5432',                    
-        'USER': 'ywwlrzcsoghutn',
-        'PASSWORD': '1BuhiyBQJkdJx6Lhnbv6XL9uE-',                             
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+#        'NAME': 'd8ntcua36nmm85',
+#        'HOST': 'ec2-50-19-219-235.compute-1.amazonaws.com',
+#        'PORT': '5432',                    
+#        'USER': 'ywwlrzcsoghutn',
+#        'PASSWORD': '1BuhiyBQJkdJx6Lhnbv6XL9uE-',                             
+#    }
+#}  
 
 GRAPPELLI_ADMIN_TITLE = "Thai Rama Administration"
