@@ -187,9 +187,9 @@
       line-height: 10em;
       padding-top: 0px;
       padding-bottom: 0px;
-      padding-left: 3em;
-      padding-right: 3em;
-      min-width: 3.3em;
+      padding-left: 2em;
+      padding-right: 2em;
+      min-width: 5.5em;
       text-align: center;
        }
     .flexnav li > ul {
