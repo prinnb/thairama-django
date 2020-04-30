@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -72,4 +72,7 @@ def menu_cat(request, menu_cat_name):
 
 	context = {'menu_cat': menu_cat, 'menu_dict' : menu_dict, 'food_cat_list' : food_cat_list}
 	return render(request, 'thairamaapp/menu_cat.html', context)
+
+def order_online(request):
+	return redirect('https://thairama3wa.smiledining.com/');
 
