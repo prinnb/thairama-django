@@ -5,3 +5,4 @@ from django.utils.translation import gettext as _
 class SuggestionForm(ModelForm):
 	class Meta:
 		model = Suggestion
+        fields = '__all__'
