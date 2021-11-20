@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from thairamaapp.models import MenuCategory,FoodMenu, FoodCategory, AlbumGallery, ImageGallery
-from forms import SuggestionForm
+from .forms import SuggestionForm
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 
