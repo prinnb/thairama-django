@@ -47,8 +47,8 @@ class FoodItem(models.Model):
 		return self.name
 
 class FoodMenuSorter(models.Model):
-    name = models.CharField(max_length=50)
-    def __unicode__(self):
+	name = models.CharField(max_length=50)
+	def __unicode__(self):
 		return self.name
 		
 class FoodMenu(models.Model):
@@ -79,7 +79,7 @@ class AlbumGallery(models.Model):
 		ordering = ['position']
 	def __unicode__(self):
 		return self.name
-        
+
 class ImageGallery(models.Model):
 	"""
 	Model to represent gallery image
